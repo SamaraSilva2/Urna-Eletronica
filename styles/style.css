@@ -1,0 +1,220 @@
+body {
+  font-family: 'Arimo', sans-serif;
+  margin: 8rem -1.5rem 0 -1.8rem;
+  width: 100vh;
+}
+
+.container__urna {
+  align-items: center;
+  background-color: rgb(219, 219, 219);
+  border-top-right-radius: 5rem;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  height: 30rem;
+  justify-content: center;
+  margin: 11rem 15rem 4rem 2rem;
+  width: 52rem;
+}
+
+.logo__tribunal {
+  display: flex;
+  background-color: #e5e5e5;
+  border: #c1c1c1  inset 0.1px;
+  border-radius: 5px;
+  border-bottom-left-radius: 0.5px;
+  border-bottom-right-radius: 0.5px;
+  flex-direction: column;
+  justify-content: center;
+  margin: -9rem -31rem 12rem 31rem;
+  padding: 1.2rem 1.6rem 1rem 3.8rem;
+  width: 12rem;
+}
+
+.container__painel {
+  background-color: rgb(226, 232, 250);
+  border: #c1c1c1 inset 0.3px;
+  border-radius: 5px;
+  height: 18rem;
+  margin: 0 -0.2rem 0 -14.5rem;
+  padding: 1.3rem;
+  width: 38rem;
+}
+
+.container__informacoes {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.4px;
+}
+
+h4 {
+  font-size: 0.9rem;
+  margin: -0.5rem 0 0.5rem -0.5rem;
+  text-transform: uppercase;
+}
+
+.container__digitos {
+  display: flex;
+}
+
+.container__digitos input {
+  background: rgb(226, 232, 250);
+  font-size: 32px;
+  font-weight: bold;
+  margin: 1rem 0.5rem 0.5rem -0.4rem;
+  max-width: 25px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 2.5rem 2rem 0.5rem -0.5rem;
+}
+
+.cargo {
+  margin-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.foto__candidato {
+  align-self: flex-end;
+  height: 6rem;
+  margin: -2.5rem -1rem;
+  width: 5rem;
+}
+
+hr {
+  margin-left: -0.8rem;
+  border-width: 2px;
+  width: 107%;
+}
+
+.fundo__botoes {
+  align-items: center;
+  background-color: rgb(47, 47, 47);
+  border-radius: 5px;
+  display: flex;
+  height: 12rem;
+  margin: 5rem 3.5rem 1rem 3.5rem;
+  padding: 4rem 2.5rem 4rem 2.6rem;
+  width: 12.5rem;
+}
+
+.botoes {
+  align-items: center;
+  border-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 3.8px;
+  padding: 3px;
+  width: 12rem;
+}
+
+.botao__num {
+  align-content: space-between;
+  background-color: rgba(16, 16, 16);
+  border-color: transparent;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 1px 15px;
+  margin: 4.5px;
+}
+
+.botoes .zero {
+  background-color: rgba(16, 16, 16);
+  border-color: transparent;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 1px 15px;
+  margin: 1px;
+}
+
+.botao__num:hover {
+  border: #4f4c4c 5px inset;
+  background-color: rgb(72, 68, 68);
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.zero:hover {
+  border: #4f4c4c 5px inset;
+  background-color: rgb(72, 68, 68);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.botoes__coloridos {
+  align-items: end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: -5px;
+  padding-top: 1rem;
+}
+
+#branco {
+  border-color: transparent;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  color: rgb(16, 16, 16);
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 8px;
+  padding: 4px 0 20px 0;
+  text-transform: uppercase;
+}
+
+#branco:hover {
+  border: #6c6a6a 5px inset;
+  background-color: rgb(228, 228, 228);
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+#corrige {
+  border-color: transparent;
+  border-radius: 5px;
+  background-color: #c71919;
+  color: rgb(16, 16, 16);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 0 20px 0;
+  margin-right: 8px;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+#corrige:hover {
+  border: #5b1616 5px inset;
+  background-color: rgb(146, 12, 34);
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+#confirma {
+  border-color: transparent;
+  border-radius: 5px;
+  background-color: #1ab433;
+  color: rgb(16, 16, 16);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0.5rem 0 2rem 0;
+  text-transform: uppercase;
+}
+
+#confirma:hover {
+  border: #1e4024 5px inset;
+  background-color: rgb(34, 148, 60);
+  cursor: pointer;
+  transition: 0.7s;
+}

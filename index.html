@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Votação Online</title>
+  </head>
+  <body>
+    <header></header>
+    <main class="container__urna">
+      <img src="/assets/tribunal.png" class="logo__tribunal" />
+      <audio src="/assets/sons/confirma-urna.mp3" id="som-confirma"></audio>
+      <audio src="/assets/sons/app-error.mp3" id="som-erro"></audio>
+      <audio src="/assets/sons/toque-digito.mp3" id="som-digito"></audio>
+      <div class="container__painel">
+        <div class="container__informacoes">
+          <h4>Seu voto para:</h4>
+          <h2 class="cargo">Presidente:</h2>
+          <img src="https://community.adobe.com/legacyfs/online/avatars/a829412_stormtrooper_001.png" alt="foto do candidato" class="foto__candidato" id="photo" />
+          <div class="container__digitos">
+            <h3>Número:</h3>
+            <input type="text" maxlength="1" id="first-number" disabled/>
+            <input type="text" maxlength="1" id="second-number" disabled/>
+          </div>
+
+          <h3 id="candidateName">Nome:</h3>
+          <h3 id="candidateParty">Partido:</h3>
+        </div>
+        <hr />
+      </div>
+      <div class="fundo__botoes">
+        <div class="botoes">
+          <button class="botao__num" onclick={receiveCandidateNumber(1)}>1</button>
+          <button class="botao__num" onclick={receiveCandidateNumber(2)}>2</button>
+          <button class="botao__num" onclick={receiveCandidateNumber(3)}>3</button>
+          <button class="botao__num" onclick={receiveCandidateNumber(4)}>4</button>
+          <button class="botao__num" onclick={receiveCandidateNumber(5)}>5</button>
+          <button class="botao__num" onclick={receiveCandidateNumber(6)}>6</button>
+          <button class="botao__num" onclick={receiveCandidateNumber(7)}>7</button>
+          <button class="botao__num" onclick={receiveCandidateNumber(8)}>8</button>
+          <button class="botao__num" onclick={receiveCandidateNumber(9)}>9</button>
+          <button class="zero" onclick={receiveCandidateNumber(0)}>0</button>
+          <div class="botoes__coloridos">
+            <button id="branco" onclick={whiteVote()}>Branco</button>
+            <button id="corrige" onclick={clearInfo()}>Corrige</button>
+            <button id="confirma" onclick={registerVote()}>Confirma</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
