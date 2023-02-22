@@ -15,17 +15,17 @@
   </head>
   <body>
     <header></header>
-    <main class="container__urna">
-      <img src="/assets/tribunal.png" class="logo__tribunal" />
-      <audio src="/assets/sons/confirma-urna.mp3" id="som-confirma"></audio>
-      <audio src="/assets/sons/app-error.mp3" id="som-erro"></audio>
-      <audio src="/assets/sons/toque-digito.mp3" id="som-digito"></audio>
-      <div class="container__painel">
-        <div class="container__informacoes">
+    <main class="container__ballotbox">
+      <img src="/assets/tribunal.png" class="logo__court" />
+      <audio src="/assets/sons/confirma-urna.mp3" id="sound-confirm"></audio>
+      <audio src="/assets/sons/app-error.mp3" id="sound-error"></audio>
+      <audio src="/assets/sons/toque-digito.mp3" id="sound-input"></audio>
+      <div class="container__screen">
+        <div class="container__info">
           <h4>Seu voto para:</h4>
-          <h2 class="cargo">Presidente:</h2>
-          <img src="https://community.adobe.com/legacyfs/online/avatars/a829412_stormtrooper_001.png" alt="foto do candidato" class="foto__candidato" id="photo" />
-          <div class="container__digitos">
+          <h2 class="position">Presidente:</h2>
+          <img src="https://iotorrino.com.br/wp-content/uploads/2021/04/no-avatar.png" alt="foto do candidato" class="candidate__photo" id="photo" />
+          <div class="container__inputs">
             <h3>Número:</h3>
             <input type="text" maxlength="1" id="first-number" disabled/>
             <input type="text" maxlength="1" id="second-number" disabled/>
@@ -36,22 +36,22 @@
         </div>
         <hr />
       </div>
-      <div class="fundo__botoes">
-        <div class="botoes">
-          <button class="botao__num" onclick={receiveCandidateNumber(1)}>1</button>
-          <button class="botao__num" onclick={receiveCandidateNumber(2)}>2</button>
-          <button class="botao__num" onclick={receiveCandidateNumber(3)}>3</button>
-          <button class="botao__num" onclick={receiveCandidateNumber(4)}>4</button>
-          <button class="botao__num" onclick={receiveCandidateNumber(5)}>5</button>
-          <button class="botao__num" onclick={receiveCandidateNumber(6)}>6</button>
-          <button class="botao__num" onclick={receiveCandidateNumber(7)}>7</button>
-          <button class="botao__num" onclick={receiveCandidateNumber(8)}>8</button>
-          <button class="botao__num" onclick={receiveCandidateNumber(9)}>9</button>
+      <div class="buttons__background">
+        <div class="buttons">
+          <button class="button__num" onclick={receiveCandidateNumber(1)}>1</button>
+          <button class="button__num" onclick={receiveCandidateNumber(2)}>2</button>
+          <button class="button__num" onclick={receiveCandidateNumber(3)}>3</button>
+          <button class="button__num" onclick={receiveCandidateNumber(4)}>4</button>
+          <button class="button__num" onclick={receiveCandidateNumber(5)}>5</button>
+          <button class="button__num" onclick={receiveCandidateNumber(6)}>6</button>
+          <button class="button__num" onclick={receiveCandidateNumber(7)}>7</button>
+          <button class="button__num" onclick={receiveCandidateNumber(8)}>8</button>
+          <button class="button__num" onclick={receiveCandidateNumber(9)}>9</button>
           <button class="zero" onclick={receiveCandidateNumber(0)}>0</button>
-          <div class="botoes__coloridos">
-            <button id="branco" onclick={whiteVote()}>Branco</button>
-            <button id="corrige" onclick={clearInfo()}>Corrige</button>
-            <button id="confirma" onclick={registerVote()}>Confirma</button>
+          <div class="buttons__colored">
+            <button id="white" onclick={whiteVote()}>Branco</button>
+            <button id="clear" onclick={clearInfo()}>Corrige</button>
+            <button id="confirm" onclick={registerVote()}>Confirma</button>
           </div>
         </div>
       </div>

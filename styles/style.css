@@ -4,7 +4,7 @@ body {
   width: 100vh;
 }
 
-.container__urna {
+.container__ballotbox {
   align-items: center;
   background-color: rgb(219, 219, 219);
   border-top-right-radius: 5rem;
@@ -18,7 +18,7 @@ body {
   width: 52rem;
 }
 
-.logo__tribunal {
+.logo__court {
   display: flex;
   background-color: #e5e5e5;
   border: #c1c1c1  inset 0.1px;
@@ -32,7 +32,7 @@ body {
   width: 12rem;
 }
 
-.container__painel {
+.container__screen {
   background-color: rgb(226, 232, 250);
   border: #c1c1c1 inset 0.3px;
   border-radius: 5px;
@@ -42,7 +42,7 @@ body {
   width: 38rem;
 }
 
-.container__informacoes {
+.container__info {
   display: flex;
   flex-direction: column;
   line-height: 0.4px;
@@ -54,11 +54,11 @@ h4 {
   text-transform: uppercase;
 }
 
-.container__digitos {
+.container__inputs {
   display: flex;
 }
 
-.container__digitos input {
+.container__inputs input {
   background: rgb(226, 232, 250);
   font-size: 32px;
   font-weight: bold;
@@ -72,13 +72,13 @@ h3 {
   margin: 2.5rem 2rem 0.5rem -0.5rem;
 }
 
-.cargo {
+.position {
   margin-top: 2rem;
   text-align: center;
   text-transform: uppercase;
 }
 
-.foto__candidato {
+.candidate__photo {
   align-self: flex-end;
   height: 6rem;
   margin: -2.5rem -1rem;
@@ -91,7 +91,7 @@ hr {
   width: 107%;
 }
 
-.fundo__botoes {
+.buttons__background {
   align-items: center;
   background-color: rgb(47, 47, 47);
   border-radius: 5px;
@@ -102,7 +102,7 @@ hr {
   width: 12.5rem;
 }
 
-.botoes {
+.buttons {
   align-items: center;
   border-color: transparent;
   border-radius: 5px;
@@ -116,7 +116,7 @@ hr {
   width: 12rem;
 }
 
-.botao__num {
+.button__num {
   align-content: space-between;
   background-color: rgba(16, 16, 16);
   border-color: transparent;
@@ -128,7 +128,7 @@ hr {
   margin: 4.5px;
 }
 
-.botoes .zero {
+.buttons .zero {
   background-color: rgba(16, 16, 16);
   border-color: transparent;
   border-radius: 5px;
@@ -139,7 +139,7 @@ hr {
   margin: 1px;
 }
 
-.botao__num:hover {
+.button__num:hover {
   border: #4f4c4c 5px inset;
   background-color: rgb(72, 68, 68);
   cursor: pointer;
@@ -153,7 +153,7 @@ hr {
   transition: 0.4s;
 }
 
-.botoes__coloridos {
+.buttons__colored {
   align-items: end;
   display: flex;
   flex-direction: row;
@@ -162,7 +162,7 @@ hr {
   padding-top: 1rem;
 }
 
-#branco {
+#white {
   border-color: transparent;
   border-radius: 5px;
   background-color: #FFFFFF;
@@ -174,14 +174,14 @@ hr {
   text-transform: uppercase;
 }
 
-#branco:hover {
+#white:hover {
   border: #6c6a6a 5px inset;
   background-color: rgb(228, 228, 228);
   cursor: pointer;
   transition: 0.7s;
 }
 
-#corrige {
+#clear {
   border-color: transparent;
   border-radius: 5px;
   background-color: #c71919;
@@ -194,14 +194,14 @@ hr {
   text-transform: uppercase;
 }
 
-#corrige:hover {
+#clear:hover {
   border: #5b1616 5px inset;
   background-color: rgb(146, 12, 34);
   cursor: pointer;
   transition: 0.7s;
 }
 
-#confirma {
+#confirm {
   border-color: transparent;
   border-radius: 5px;
   background-color: #1ab433;
@@ -212,7 +212,7 @@ hr {
   text-transform: uppercase;
 }
 
-#confirma:hover {
+#confirm:hover {
   border: #1e4024 5px inset;
   background-color: rgb(34, 148, 60);
   cursor: pointer;

@@ -1,17 +1,17 @@
 function playAudio() {
-  const audio = document.getElementById('som-confirma');
+  const audio = document.getElementById('sound-confirm');
 
   audio.play();
 }
 
-function playAudioErro() {
-  const audio = document.getElementById('som-erro');
+function playAudioError() {
+  const audio = document.getElementById('sound-error');
 
   audio.play();
 }
 
-function playDigito() {
-  const audio = document.getElementById('som-digito');
+function playInput() {
+  const audio = document.getElementById('sound-input');
 
   audio.play();
 }
@@ -55,8 +55,8 @@ const searchCandidate = (candidateNumber) => {
     }
   ];
 
-  // Mapeando o array cand com o método find() que retorna o primeiro elemento que achar no array que atender a condição informada
-  // Condição o número do candidato informado no parâmetro é igual a propriedade numberCandidate de um dos objetos do array
+  // Mapeando o array cand com o método find() que retorna o primeiro elemento do array que atender a condição informada
+  // A condição é que o número armazenado no parâmetro seja igual a propriedade numberCandidate de um dos objetos do array cand=[],
   // Atribuindo dentro da variável foundCandidate
   const foundCandidate = cand.find((item) => {
   return item.numberCandidate === candidateNumber;
@@ -72,11 +72,11 @@ return false;
 
 // Receber o número do candidato como parâmetro
 function receiveCandidateNumber(candidateNumber) {
-  playDigito();
+  playInput();
   // Buscando input com id #first-number
   const firstNumber = document.querySelector('#first-number');
 
-  // Verificando se o valor do input firstNumber está vazio
+  // Verificando se o valor de firstNumber está vazio
   if(firstNumber.value === '') {
     // Se estiver vazio, adiciona o valor recebido da função no valor do input, encerrando com return
     firstNumber.value = candidateNumber;
@@ -88,7 +88,7 @@ function receiveCandidateNumber(candidateNumber) {
   if(firstNumber.value !== '') {
     // Buscando input com id #second-number
     const secondNumber = document.querySelector('#second-number');
-    // adiciona o valor recebido da função no valor do input com id #second-number
+    // adiciona o valor recebido da função no valor de secondNumber
     secondNumber.value = candidateNumber;
   }
 
@@ -97,9 +97,10 @@ function receiveCandidateNumber(candidateNumber) {
 
   // Chamando a função que busca um candidato, recebendo como parâmetro o número do candidato que é a concatenação do valor do input com id #first-number 
   // mais o valor do input #second-number
-  // atribuindo a variável candidate o candidato retornado pela função. 
+  // atribuindo à variável candidate o candidato retornado pela função. 
   const candidate = searchCandidate(firstNumber.value + secondNumber.value);
 
+  // Caso o valor de candidate corresponda a algum elemento dentro de objeto do array, mostrar na tela as informações correspondentes
   if(candidate) {
    const photo = document.querySelector('#photo');
    photo.src = candidate.candidatePhoto;
@@ -112,9 +113,10 @@ function receiveCandidateNumber(candidateNumber) {
   }
 }
 
+// Função com a tarefa de limpar os dados com o acionamento do botão Corrigir
 const clearInfo = function () {
   const photo = document.querySelector('#photo');
-  photo.src = "https://community.adobe.com/legacyfs/online/avatars/a829412_stormtrooper_001.png";
+  photo.src = "https://iotorrino.com.br/wp-content/uploads/2021/04/no-avatar.png";
 
   const first = document.querySelector('#first-number');
   first.value = ""; 
@@ -129,6 +131,7 @@ const clearInfo = function () {
   party.innerHTML = `Partido: `;
 }
 
+// Registra e confirma o voto em branco
 const whiteVote = function () {
   clearInfo();
   playAudio();
@@ -141,12 +144,14 @@ const whiteVote = function () {
   })
 }
 
+// Confirma o voto tanto para candidatos existentes, quanto para números sem correspondência
 const registerVote = function () {
   const firstInput = document.querySelector('#first-number');
   const secondInput = document.querySelector('#second-number');
 
+  // Pede que se digite o número caso um dos campos esteja vazio ao ser acionado o botão Confirma
    if(firstInput.value === '' || secondInput.value === '') {
-    playAudioErro();
+    playAudioError();
     Swal.fire({
       position: 'top-center',
       icon: 'info',
@@ -158,10 +163,13 @@ const registerVote = function () {
     return;
   }
 
+  // Armazena o número concatenado dos dois inputs
   const result = firstInput.value + secondInput.value;
-  
+
+  // Atribui a função searchCandidate() a uma variável, passando a concatenação dos inputs como parâmetro
   const chosenCandidate = searchCandidate(result);
 
+  // Caso a concatenação tenha dois dígitos e o número resultante corresponda ao de uma das chaves do array de objetos, confirmar o voto com mensagem ao acionar o botão Confirmar  
   if(Object.keys(chosenCandidate).length > 1){
     playAudio();
     Swal.fire({
@@ -172,7 +180,10 @@ const registerVote = function () {
       timer: 2000
     })
 
+    // Limpar tela assim que o voto for confirmado
     clearInfo();
+
+    // Caso o número com dois dígitos não seja de um dos candidatos do array, confirmar sem mostrar informações
   } else {
     playAudio();
     Swal.fire({
@@ -182,7 +193,7 @@ const registerVote = function () {
       showConfirmButton: false,
       timer: 2000
     })
-
+    // Limpar tela assim que o voto for confirmado
     clearInfo();
   }
 }
