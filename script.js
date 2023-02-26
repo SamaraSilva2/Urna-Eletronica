@@ -187,7 +187,7 @@ const registerVote = function () {
   } else {
     playAudio();
     Swal.fire({
-      position: 'top-center',
+      position: 'center',
       icon: 'success',
       title: `Voto nulo!`,
       showConfirmButton: false,

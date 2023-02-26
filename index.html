@@ -14,9 +14,12 @@
     <title>Votação Online</title>
   </head>
   <body>
-    <header></header>
+    <header class="container__header">
+      <h1 class="text-header">
+        Urna
+      </h1>
+    </header>
     <main class="container__ballotbox">
-      <img src="/assets/tribunal.png" class="logo__court" />
       <audio src="/assets/sons/confirma-urna.mp3" id="sound-confirm"></audio>
       <audio src="/assets/sons/app-error.mp3" id="sound-error"></audio>
       <audio src="/assets/sons/toque-digito.mp3" id="sound-input"></audio>
@@ -36,25 +39,30 @@
         </div>
         <hr />
       </div>
-      <div class="buttons__background">
-        <div class="buttons">
-          <button class="button__num" onclick={receiveCandidateNumber(1)}>1</button>
-          <button class="button__num" onclick={receiveCandidateNumber(2)}>2</button>
-          <button class="button__num" onclick={receiveCandidateNumber(3)}>3</button>
-          <button class="button__num" onclick={receiveCandidateNumber(4)}>4</button>
-          <button class="button__num" onclick={receiveCandidateNumber(5)}>5</button>
-          <button class="button__num" onclick={receiveCandidateNumber(6)}>6</button>
-          <button class="button__num" onclick={receiveCandidateNumber(7)}>7</button>
-          <button class="button__num" onclick={receiveCandidateNumber(8)}>8</button>
-          <button class="button__num" onclick={receiveCandidateNumber(9)}>9</button>
-          <button class="zero" onclick={receiveCandidateNumber(0)}>0</button>
-          <div class="buttons__colored">
-            <button id="white" onclick={whiteVote()}>Branco</button>
-            <button id="clear" onclick={clearInfo()}>Corrige</button>
-            <button id="confirm" onclick={registerVote()}>Confirma</button>
+
+      <div>
+        <img src="/assets/tribunal.png" class="logo__court" />
+        <div class="buttons__background">
+          <div class="buttons">
+            <button class="button__num" onclick={receiveCandidateNumber(1)}>1</button>
+            <button class="button__num" onclick={receiveCandidateNumber(2)}>2</button>
+            <button class="button__num" onclick={receiveCandidateNumber(3)}>3</button>
+            <button class="button__num" onclick={receiveCandidateNumber(4)}>4</button>
+            <button class="button__num" onclick={receiveCandidateNumber(5)}>5</button>
+            <button class="button__num" onclick={receiveCandidateNumber(6)}>6</button>
+            <button class="button__num" onclick={receiveCandidateNumber(7)}>7</button>
+            <button class="button__num" onclick={receiveCandidateNumber(8)}>8</button>
+            <button class="button__num" onclick={receiveCandidateNumber(9)}>9</button>
+            <button class="zero" onclick={receiveCandidateNumber(0)}>0</button>
+            <div class="buttons__colored">
+              <button id="white" onclick={whiteVote()}>Branco</button>
+              <button id="clear" onclick={clearInfo()}>Corrige</button>
+              <button id="confirm" onclick={registerVote()}>Confirma</button>
+            </div>
           </div>
         </div>
       </div>
+      
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>

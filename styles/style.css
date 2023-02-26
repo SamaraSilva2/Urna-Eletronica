@@ -1,51 +1,111 @@
+@media (max-width: 728px) {
+  html {
+    font-size: 80%;
+  }
+}
+
 body {
   font-family: 'Arimo', sans-serif;
-  margin: 8rem -1.5rem 0 -1.8rem;
-  width: 100vh;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__header {
+  background: rgb(8, 8, 60);
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-header {
+  color: #c1c1c1;
+  font-size: 1.5rem;
 }
 
 .container__ballotbox {
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
   background-color: rgb(219, 219, 219);
   border-top-right-radius: 5rem;
   border-top-left-radius: 5rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  display: flex;
-  height: 30rem;
   justify-content: center;
-  margin: 11rem 15rem 4rem 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   width: 52rem;
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 728px) {
+  .container__ballotbox {
+    width: 350px;
+    margin: 2rem 0 0 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .logo__court {
   display: flex;
   background-color: #e5e5e5;
-  border: #c1c1c1  inset 0.1px;
+  border: #c1c1c1 inset 0.1px;
   border-radius: 5px;
   border-bottom-left-radius: 0.5px;
   border-bottom-right-radius: 0.5px;
   flex-direction: column;
   justify-content: center;
-  margin: -9rem -31rem 12rem 31rem;
-  padding: 1.2rem 1.6rem 1rem 3.8rem;
-  width: 12rem;
+  padding: 1.2rem 2.6rem 1.2rem 2.6rem;
+  width: 12.5rem;
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 728px) {
+  .logo__court {
+    display: none;
+  }
 }
 
 .container__screen {
   background-color: rgb(226, 232, 250);
   border: #c1c1c1 inset 0.3px;
   border-radius: 5px;
-  height: 18rem;
-  margin: 0 -0.2rem 0 -14.5rem;
   padding: 1.3rem;
-  width: 38rem;
+  width: 25rem;
+  margin-left: 10px;
+}
+
+@media (max-width: 728px) {
+  .container__screen {
+    width: 280px;
+    margin: 0;
+  }
 }
 
 .container__info {
   display: flex;
   flex-direction: column;
   line-height: 0.4px;
+}
+
+@media (max-width: 728px) {
+  .container__info {
+    width: 280px;
+    margin: 0;
+  }
 }
 
 h4 {
@@ -60,7 +120,7 @@ h4 {
 
 .container__inputs input {
   background: rgb(226, 232, 250);
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   margin: 1rem 0.5rem 0.5rem -0.4rem;
   max-width: 25px;
@@ -91,15 +151,26 @@ hr {
   width: 107%;
 }
 
+
 .buttons__background {
   align-items: center;
   background-color: rgb(47, 47, 47);
   border-radius: 5px;
   display: flex;
-  height: 12rem;
-  margin: 5rem 3.5rem 1rem 3.5rem;
-  padding: 4rem 2.5rem 4rem 2.6rem;
+  padding: 1rem 2.6rem 1rem 2.6rem;
   width: 12.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 728px) {
+  .buttons__background {
+    width: 250px;
+    margin: 0;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .buttons {
@@ -116,13 +187,21 @@ hr {
   width: 12rem;
 }
 
+@media (max-width: 728px) {
+  .buttons {
+    margin: 0;
+    padding: 0;
+    width: 15rem;
+  }
+}
+
 .button__num {
   align-content: space-between;
   background-color: rgba(16, 16, 16);
   border-color: transparent;
   border-radius: 5px;
   color: #FFFFFF;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   padding: 1px 15px;
   margin: 4.5px;
@@ -133,7 +212,7 @@ hr {
   border-color: transparent;
   border-radius: 5px;
   color: #FFFFFF;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   padding: 1px 15px;
   margin: 1px;
@@ -167,7 +246,7 @@ hr {
   border-radius: 5px;
   background-color: #FFFFFF;
   color: rgb(16, 16, 16);
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: bold;
   margin-right: 8px;
   padding: 4px 0 20px 0;
@@ -186,7 +265,7 @@ hr {
   border-radius: 5px;
   background-color: #c71919;
   color: rgb(16, 16, 16);
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 4px 0 20px 0;
   margin-right: 8px;
@@ -206,7 +285,7 @@ hr {
   border-radius: 5px;
   background-color: #1ab433;
   color: rgb(16, 16, 16);
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 0.5rem 0 2rem 0;
   text-transform: uppercase;
